@@ -1,0 +1,43 @@
+performance metric determines which protocol/solution better
+
+brute force vs layering
+
+brute force more effort, but faster
+layering less effort per layer, reusable (change one layer without affecting others as long as same interface), less efficient
+
+everything above transport layer is end to end
+data link is hop by hop
+
+only link layer needs header and footer for synchronisation
+
+layered vs cross layer design
+
+hub vs switch vs router
+broadcast vs point to point vs different subnets(heirarchical ip address)
+
+required reading => cross layer design
+https://scholarbank.nus.edu.sg/handle/10635/55477
+
+Cross-layer design refers to protocol design done by actively exploiting 
+the dependence between protocol layers to obtain performance gains
+
+vs layered design where protocols at different layers are designed independently, architecture
+forbids direct communication between nonadjacent layers, communication between adjacent layers are also limited to 
+procedure calls and responses
+
+examples of cross layer design:
+1.design an L3 protocol that needs L1 to pass a parameter to L3 at runtime which calls for a new interface
+2.view L2 and L1 as a superlayer and design a joint protocol
+3.design protocol at L3, keeping in mind process done in L1, non independent design
+
+if many architecture violations accumulate over time, original architecture can completely lose its meaning
+detrimental effect on system longetivity
+
+wireless networks offer opportunistic communication that cannot be sufficiently exploited in layered design
+e.g time varying link quality allows oportunistic use of channel
+e.g wireless medium offers new modalities, physical layer receives multiple packets, broadcast nature of channel
+
+proposals for implementing cross layer interactions:
+1.direct communication between layers
+2.shared database across all layers
+3.new abstractions/design

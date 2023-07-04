@@ -1,0 +1,35 @@
+Internetworking is the practice of interconnecting multiple computer networks, such that any pair of hosts 
+in the connected networks can exchange messages irrespective of their hardware-level networking technology. 
+The resulting system of interconnected networks are called an internetwork, or simply an internet.
+
+circuit switching - dedicated resources for guaranteed performance
+		  - FDM, TDM
+		  - better for constant bit rate data (e.g voice calls)
+
+packet switching - statistical multiplexing
+		 - better for bursty data
+		 - more and more circuit like
+
+metrics
+
+throughput
+delay
+loss
+
+bottleneck link might not be telco fault, usually link on end-end path
+
+X ~ B(35, 0.1)
+
+P(X>10) = 1-binomcdf(35, 0.1, 10)
+        = 4.24x10^-4
+
+ping measures RTT
+
+traceroute RTT gets longer the further the router is
+
+ping.eu
+
+Homework
+
+1. why do we have reliability at both layer 2 and layer 4?
+2. why do we use both IP and MAC addresses in the Internet?
